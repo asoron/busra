@@ -1,0 +1,148 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212; /* Deeper dark background */
+    color: #e0e0e0; /* Light grey for text for better contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 16px; /* Base font size for mobile */
+
+}
+
+.container {
+    background: #1e1e1e; /* Slightly lighter than body for depth */
+    padding: 40px;
+    margin: 40PX;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+    backdrop-filter: blur(5px);
+}
+
+.insight-box h1 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 2em;
+    color: #ffffff; /* Pure white for headings */
+}
+
+.insight-text {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0;
+    color: #bbbbbb; /* Slightly dimmer text for comfortable reading */
+}
+
+.generate-insight {
+    background-color: #ff4081; /* Button color can remain for contrast */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.generate-insight:hover {
+    background-color: #f50057; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+.generate-insight:active {
+    transform: scale(1);
+}
+
+.rules-section {
+    margin-top: 20px;
+    text-align: center; /* Center align if it suits the design */
+    background: #262626; /* Dark background for rules */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -60px; /* Position at the bottom of the insight box */
+    width: 90%; /* Adjust width as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle-rules {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Smaller padding for a smaller button */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+    display: inline-block; /* For inline positioning */
+    margin: 0; /* Reset any margins */
+}
+
+.rules-content {
+    display: none; /* Hidden initially */
+    color: #e0e0e0;
+    text-align: left; /* Align text to the left inside the rules content */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toggle-rules.appear {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.insight-text.appear {
+    animation: fadeIn 0.5ms ease-in; 
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Add styles for tablets and larger screens */
+}
+
+/* Media query for screens larger than 1024px (desktops) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    /* Add styles for desktop screens */
+}
