@@ -15,7 +15,7 @@ const insights = [
     "1 Saat içinde bir tatlı yap.",
     "2 Saat içinde bütün ev işlerini yap.",
     "1 Gün içerisinde onu şaşırt.",
-    "Ertesi Gün yatağına lahvaltı servisi yap.",
+    "Ertesi Gün yatağına kahvaltı servisi yap.",
     "Zorunda Kalmadıkça Onun Görüş alanından çıkma.",
     "1 Gün boyunca herşey için izin al.",
     "1 Gün boyunca Telefonun komple ona bırak."
@@ -46,5 +46,7 @@ document.getElementById('toggle-rules').addEventListener('click', function() {
         this.textContent = 'Önemli';
     }
 });
+
+
 
 
